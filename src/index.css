@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat; /* Wyłączenie powtarzania obrazu */
   background-attachment: fixed; /* Ustawienie obrazu jako stałe tło */
   background-position: center center; /* Wyśrodkowanie obrazu na stronie */
+  overflow: hidden; /* Wyłączenie skrolowania na całej stronie */
 }
 /* Definicja kolorów */
 :root {
