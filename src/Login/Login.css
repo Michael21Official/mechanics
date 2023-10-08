@@ -1,17 +1,14 @@
 /* Styl kontenera logowania */
 .login-container {
-  background-color: var(--primary-bg-color); /* Główne tło */
-  color: var(--text-color); /* Kolor tekstu */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień */
-  max-width: 400px; /* Maksymalna szerokość kontenera */
-  margin: 0 auto; /* Wyśrodkowanie na ekranie */
-  display: flex;
-  flex-direction: column; /* Układ elementów w kolumnie */
-  align-items: center; /* Wyśrodkowanie elementów w pionie */
-}
-
+    background-color: var(--primary-bg-color); /* Główne tło */
+    color: var(--text-color); /* Kolor tekstu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień */
+    max-width: 400px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyśrodkowanie na ekranie */
+  }
+  
 /* Styl pól wejściowych */
 .input-field {
   width: 100%;
@@ -21,18 +18,20 @@
   border-radius: 5px;
   background-color: transparent;
   color: var(--text-color);
+  box-sizing: border-box; /* Dodaj box-sizing, aby uwzględnić padding i border w szerokości */
 }
 
-/* Styl przycisku logowania */
-.button {
-  background-color: var(--accent-color); /* Kolor akcentu */
-  color: var(--text-color);
-  padding: 10px 20px;
-  margin: 10px 0; /* Dodatkowy odstęp z boków przycisku */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Dodatkowe style lub zmiany można dodać według potrzeb */
+  
+  /* Styl przycisku logowania */
+  .button {
+    background-color: var(--accent-color); /* Kolor akcentu */
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Dodatkowe style lub zmiany można dodać według potrzeb */
+  

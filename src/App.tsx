@@ -1,13 +1,17 @@
 import React from 'react';
-import Login from './Login/Login'; // Importuj komponent Login
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './Login/LoginPage'; // Importuj stronę logowania
+import PostsPage from './Posts/PostsPage'; // Importuj stronę z postami
 
 function App() {
   return (
-    <div className="App">
-      {/* Dodaj komponent Login tutaj */}
-      <Login />
-      {/* Inne komponenty i treść strony */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/posts" element={<PostsPage />} />
+        <Route index element={<LoginPage />} /> {/* Dodaj trasę dla domyślnej strony */}
+      </Routes>
+    </Router>
   );
 }
 
