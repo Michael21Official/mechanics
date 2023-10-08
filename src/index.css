@@ -1,13 +1,27 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url('/public/image/background.jpg'); /* Ścieżka do obrazu w folderze "public" */
+  background-size: contain; /* Dopasowanie obrazu do rozmiaru ekranu, bez deformowania i bez ucinania */
+  background-repeat: no-repeat; /* Wyłączenie powtarzania obrazu */
+  background-attachment: fixed; /* Ustawienie obrazu jako stałe tło */
+  background-position: center center; /* Wyśrodkowanie obrazu na stronie */
+}
+/* Definicja kolorów */
+:root {
+  --primary-bg-color: #274268; /* Główny kolor tła */
+  --text-color: #FFFFFF; /* Kolor tekstu na tle głównym */
+  --accent-color: #AF0A7F; /* Kolor akcentu lub przycisków */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Style elementów */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  /* Dodaj pozostałe style tutaj */
+}
+
+/* Styl przycisków */
+.button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  /* Dodaj inne style przycisków tutaj */
 }
