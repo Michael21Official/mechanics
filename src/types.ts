@@ -14,6 +14,12 @@ export interface UserData {
     content: string;
     date: string;
   }
+
+  //Typy do PrivateRoute
+  export interface RouteType {
+    element: Element;
+    isAuthenticated: boolean;
+  }
   
   // Dodaj inne typy danych, jeśli są potrzebne
   
