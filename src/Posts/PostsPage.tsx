@@ -1,5 +1,6 @@
 import React from 'react';
 import Posts from './Posts'; // Importuj komponent z postami
+import './PostPage.css'; // Importuj plik ze stylami CSS
 
 function PostPage() {
   return (

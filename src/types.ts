@@ -1,5 +1,8 @@
 // types.ts
 
+import { ReactNode } from 'react';
+
+
 // Typ dla danych użytkownika
 export interface UserData {
     email: string;
@@ -19,6 +22,12 @@ export interface UserData {
   export interface RouteType {
     element: Element;
     isAuthenticated: boolean;
+  }
+
+  // Interfejs dla props komponentu PrivateRoute
+  export interface PrivateRouteProps {
+    isAuthenticated: boolean;
+    children: ReactNode;
   }
   
   // Dodaj inne typy danych, jeśli są potrzebne
