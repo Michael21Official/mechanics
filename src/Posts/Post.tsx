@@ -1,5 +1,6 @@
 import React from 'react';
 import { PostType } from '../types'; // Importuj typ PostType z pliku types.ts
+import './Post.css'; // Importuj plik ze stylami CSS
 
 // Określenie typów dla właściwości komponentu
 interface PostProps {
