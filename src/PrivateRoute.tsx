@@ -1,13 +1,15 @@
-import React from 'react';
-import { Outlet, Navigate } from 'react-router-dom';
+// PrivateRoute.tsx
 
-// Ten komponent renderuje komponent tylko, gdy użytkownik jest zalogowany
-function PrivateRoute({ isAuthenticated }: { isAuthenticated: boolean }) {
-  return isAuthenticated ? (
-    <Outlet /> // Outlet jest używany w nowej wersji react-router-dom
-  ) : (
-    <Navigate to="/login" replace={true} />
-  );
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { PrivateRouteProps } from './types'; // Zaimportuj interfejs z pliku types.ts
+
+function PrivateRoute({ isAuthenticated, children }: PrivateRouteProps) {
+  if (isAuthenticated) {
+    return <>{children}</>; // Wyświetl dzieci, jeśli użytkownik jest uwierzytelniony
+  } else {
+    return <Navigate to="/login" replace={true} />;
+  }
 }
 
 export default PrivateRoute;
