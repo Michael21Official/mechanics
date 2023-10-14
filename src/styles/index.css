@@ -1,5 +1,5 @@
 body {
-  background-image: url('/public/image/background.jpg'); /* Ścieżka do obrazu w folderze "public" */
+  background-image: url('../assets/image/background.jpg'); /* Ścieżka do obrazu w folderze "public" */
   background-size: contain; /* Dopasowanie obrazu do rozmiaru ekranu, bez deformowania i bez ucinania */
   background-repeat: no-repeat; /* Wyłączenie powtarzania obrazu */
   background-attachment: fixed; /* Ustawienie obrazu jako stałe tło */

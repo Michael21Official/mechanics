@@ -1,0 +1,37 @@
+/* Header.css */
+
+header {
+    background-color: #343a40; /* Tło nagłówka */
+    color: #fff; /* Kolor tekstu */
+    padding: 10px 0; /* Wewnętrzny padding w pionie i poziomie */
+  }
+  
+  nav {
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz nawigacji */
+  }
+  
+  ul {
+    list-style: none; /* Usunięcie domyślnego punktowania na liście */
+    padding: 0; /* Usunięcie wewnętrznego paddingu listy */
+  }
+  
+  li {
+    display: inline; /* Wyświetlenie elementów nawigacji obok siebie */
+    margin-right: 20px; /* Margines między elementami nawigacji */
+  }
+  
+  /* Stylowanie linków nawigacyjnych */
+  a {
+    text-decoration: none; /* Usunięcie podkreślenia linków */
+    color: #fff; /* Kolor linków */
+    font-weight: bold; /* Pogrubienie tekstu */
+    font-size: 18px; /* Rozmiar tekstu */
+    transition: color 0.2s; /* Animacja zmiany koloru po najechaniu myszką */
+  
+    /* Dodatkowy efekt, np. zmiana koloru po najechaniu myszką */
+    /* Możesz dostosować ten efekt do własnych preferencji */
+    &:hover {
+      color: #86baff; /* Kolor linku po najechaniu myszką */
+    }
+  }
+  

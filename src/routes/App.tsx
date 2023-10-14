@@ -1,11 +1,10 @@
-// App.tsx
-
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import LoginPage from './Login/LoginPage';
-import PostsPage from './Posts/PostsPage';
+import LoginPage from '../components/login/LoginPage';
+import PostsPage from '../components/posts/PostsPage';
+import UserProfilePage from '../components/profiles/UserProfilePage'; // Importuj komponent UserProfilePage
 import PrivateRoute from './PrivateRoute';
 
 function App() {
@@ -21,6 +20,18 @@ function App() {
             isAuthenticated ? (
               <PrivateRoute isAuthenticated={isAuthenticated}>
                 <PostsPage />
+              </PrivateRoute>
+            ) : (
+              <Navigate to="/login" replace={true} />
+            )
+          }
+        />
+        <Route
+          path="/profile" // Upewnij się, że dynamiczny segment jest obecny
+          element={
+            isAuthenticated ? (
+              <PrivateRoute isAuthenticated={isAuthenticated}>
+                <UserProfilePage />
               </PrivateRoute>
             ) : (
               <Navigate to="/login" replace={true} />

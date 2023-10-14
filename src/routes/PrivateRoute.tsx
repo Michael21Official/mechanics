@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { PrivateRouteProps } from './types'; // Zaimportuj interfejs z pliku types.ts
+import { PrivateRouteProps } from '../types/types'; // Zaimportuj interfejs z pliku types.ts
 
 function PrivateRoute({ isAuthenticated, children }: PrivateRouteProps) {
   if (isAuthenticated) {
