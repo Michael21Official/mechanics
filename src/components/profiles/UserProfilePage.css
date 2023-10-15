@@ -18,6 +18,9 @@ html {
   .left {
     width: 250px;
     margin-left: 20px;
+    background-color: #fff; /* Add a white background color */
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.35); /* Add a shadow effect */
+    border-radius: 15px; /* Add border-radius for rounded corners */
   }
   
   .right {

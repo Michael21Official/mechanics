@@ -4,25 +4,24 @@ import { useParams } from 'react-router-dom';
 import UserProfile from '../profiles/UserProfile';
 import UserStats from '../profiles/UserStats';
 import RecentMatches from '../profiles/RecentMatches';
-import Header from '../common/Header'; // Importuj komponent Header
-import { UserData } from '../../types/types';
-import './UserProfilePage.css'; // Importuj arkusz stylów CSS
+import Header from '../common/Header';
+import { UserData } from '../../types/types'; // Import user data type
+import './UserProfilePage.css';
 
 function UserProfilePage() {
   const { userId } = useParams<{ userId: string }>();
   const [user, setUser] = useState<UserData | null>(null);
 
   useEffect(() => {
-    // Symulacja pobierania danych użytkownika z serwera
+    // Simulate fetching user data from the server
     const fakeUser: UserData = {
-      avatarUrl: './assets/image/awatarbetla.png',
+      avatarUrl: require('../../assets/image/awatarbetla.png'), // Use require for the image path
       username: 'ExampleUser',
     };
 
     setUser(fakeUser);
   }, [userId]);
 
-  // Symulacja danych statystyk i wyników meczów
   const userStats = {
     pvp: 62,
     farming: 48,
@@ -39,7 +38,7 @@ function UserProfilePage() {
 
   return (
     <div className="user-profile-page">
-      <Header /> {/* Wyświetl nagłówek na górze strony */}
+      <Header />
       {user ? (
         <div className="container">
           <div className="left">
