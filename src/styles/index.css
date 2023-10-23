@@ -1,3 +1,11 @@
+html, body {
+  margin: 1;
+  padding: 0;
+  background-color: #a7d7ff;
+  min-height: 100vh;
+  font-family: "Roboto";
+}
+
 body {
   background-image: url('../assets/image/background.jpg'); /* Ścieżka do obrazu w folderze "public" */
   background-size: contain; /* Dopasowanie obrazu do rozmiaru ekranu, bez deformowania i bez ucinania */
