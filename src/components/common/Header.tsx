@@ -8,10 +8,14 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/profile">Profil</Link>
+            <Link to="/profile">
+              <button className="button">Profil</button>
+            </Link>
           </li>
           <li>
-            <Link to="/posts">Posty</Link>
+            <Link to="/posts">
+              <button className="button">Posty</button>
+            </Link>
           </li>
         </ul>
       </nav>
