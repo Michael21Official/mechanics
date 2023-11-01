@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post'; // Importuj komponent Post
-import { PostType } from '../types'; // Importuj typ PostType z pliku types.ts
+import { PostType } from '../../types/types'; // Importuj typ PostType z pliku types.ts
 
 function Posts() {
   // Stan przechowujący posty
@@ -23,6 +23,24 @@ function Posts() {
         author: 'User2',
         content: 'To jest treść drugiego posta.',
         date: '2023-10-11',
+      },
+      {
+        id: 1,
+        author: 'User1',
+        content: 'To jest treść trzeciego posta.',
+        date: '2023-10-10',
+      },
+      {
+        id: 2,
+        author: 'User2',
+        content: 'To jest treść czwartego posta.',
+        date: '2023-10-11',
+      },
+      {
+        id: 1,
+        author: 'User1',
+        content: 'To jest treść piątego posta.',
+        date: '2023-10-10',
       },
     ];
 
