@@ -1,0 +1,5 @@
+.post-view {
+  margin: 0 -8px;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,9 +1,7 @@
-// PostPage.tsx
 import React from 'react';
-import Posts from './Posts';
 import Header from '../common/Header';
-import { UserProfileProps } from '../../types/types';
-import ProfileInPosts from './ProfileInPosts'; // Import nowego komponentu
+import ProfileInPosts from './ProfileInPosts';
+import PostService from './PostService';
 
 function PostPage() {
   const user = {
@@ -11,12 +9,46 @@ function PostPage() {
     username: 'NazwaUzytkownika',
   };
 
+  // Przykładowe dane postów
+  const posts = [
+    {
+      image: 'awatarztlem.png',
+      name: 'Nazwa Postu 1',
+      status: 'Aktywny',
+      comments: 32,
+      category: 'IT',
+    },
+    {
+      image: 'logo.png',
+      name: 'Nazwa Postu 2',
+      status: 'Nieaktywny',
+      comments: 15,
+      category: 'Inna kategoria',
+    },
+    {
+      image: 'awatarztlem.png',
+      name: 'Nazwa Postu 1',
+      status: 'Aktywny',
+      comments: 32,
+      category: 'IT',
+    },
+    {
+      image: 'logo.png',
+      name: 'Nazwa Postu 2',
+      status: 'Nieaktywny',
+      comments: 15,
+      category: 'Inna kategoria',
+    },
+    
+    
+    // Dodaj więcej postów według potrzeb
+  ];
+
   return (
     <div className="post-page">
       <Header />
-      <ProfileInPosts user={user} /> {/* Użyj nowego komponentu ProfileInPosts */}
-      <h2>Twoje Posty</h2>
-      <Posts />
+      <ProfileInPosts user={user} />
+      <PostService posts={posts} /> {/* Przekazuj dane postów do PostService */}
       {/* Dodaj tutaj formularz do tworzenia nowych postów lub inne funkcje */}
     </div>
   );

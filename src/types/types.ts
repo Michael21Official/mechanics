@@ -17,6 +17,17 @@ export interface PostType {
   date: string;
 }
 
+export interface PostServiceProps {
+  posts: {
+    image: string;
+    name: string;
+    status: string;
+    comments: number;
+    category: string;
+  }[];
+}
+
+
 // Typy do PrivateRoute
 export interface RouteType {
   element: ReactNode; // element może być dowolnym elementem React (komponentem lub JSX)

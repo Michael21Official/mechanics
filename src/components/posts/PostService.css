@@ -1,0 +1,6 @@
+/* PostService.css */
+.post-view {
+    display: flex;
+    flex-wrap: wrap; /* Elementy będą zawijać się do nowego wiersza */
+    justify-content: center; /* Wyśrodkuj elementy na szerokości ekranu */
+  }
