@@ -39,6 +39,34 @@ function PostPage() {
       comments: 15,
       category: 'Inna kategoria',
     },
+    {
+      image: 'awatarztlem.png',
+      name: 'Nazwa Postu 1',
+      status: 'Aktywny',
+      comments: 32,
+      category: 'IT',
+    },
+    {
+      image: 'logo.png',
+      name: 'Nazwa Postu 2',
+      status: 'Nieaktywny',
+      comments: 15,
+      category: 'Inna kategoria',
+    },
+    {
+      image: 'awatarztlem.png',
+      name: 'Nazwa Postu 1',
+      status: 'Aktywny',
+      comments: 32,
+      category: 'IT',
+    },
+    {
+      image: 'logo.png',
+      name: 'Nazwa Postu 2',
+      status: 'Nieaktywny',
+      comments: 15,
+      category: 'Inna kategoria',
+    },
     
     
     // Dodaj więcej postów według potrzeb

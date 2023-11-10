@@ -1,6 +1,20 @@
 /* PostService.css */
-.post-view {
-    display: flex;
-    flex-wrap: wrap; /* Elementy będą zawijać się do nowego wiersza */
-    justify-content: center; /* Wyśrodkuj elementy na szerokości ekranu */
-  }
+.post-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Opcjonalnie, jeśli chcesz wyśrodkować zarówno wertykalnie, jak i horyzontalnie */
+}
+
+.post-component {
+  background-color: var(--background-accent-color); /* Kolor tła */
+  border-radius: 50px; /* Zaokrąglony kształt */
+  padding: 20px; /* Dodatkowy odstęp wewnątrz komponentu */
+}
+
+/* Definicja kolorów */
+:root {
+  --primary-bg-color: rgba(0, 0, 0, 0.5); /* Przezroczysty kolor tła */
+  --text-color: #FFFFFF; /* Kolor tekstu na tle głównym */
+  --background-accent-color: #df43b2c0; /* Kolor akcentu lub przycisków */
+}
