@@ -1,19 +1,42 @@
-import React from 'react';
+// Posts.tsx
+import React, { useState } from 'react';
+import PostView from './components/postView/PostView';
 import { PostType } from '../../types/types';
-import './Post.css';
+import Post from './Post';
+import './Posts.css';
 
-interface PostProps {
-  post: PostType;
+interface PostsProps {
+  posts: PostType[];
 }
 
-const Post: React.FC<PostProps> = ({ post }) => {
+const Posts: React.FC<PostsProps> = ({ posts }) => {
+  const [selectedPost, setSelectedPost] = useState<PostType | null>(null);
+
+  const handlePostClick = (post: PostType) => {
+    setSelectedPost(post);
+  };
+
+  const handleClosePostView = () => {
+    setSelectedPost(null);
+  };
+
   return (
-    <div className="post-profile">
-      <div className="post-profile-username">{post.author}</div>
-      <div className="post-profile-content">{post.content}</div>
-      <div className="post-profile-date">{post.date}</div>
+    <div className="post-view">
+      {posts.map((post) => (
+        <div key={post.id} onClick={() => handlePostClick(post)}>
+          {/* Dodaj obsługę kliknięcia na post */}
+          <Post key={post.id} post={post} />
+        </div>
+      ))}
+
+      {selectedPost && (
+        <div className="post-view-overlay">
+          {/* Wyświetl moduł PostView po kliknięciu na post */}
+          <PostView post={selectedPost} onClose={handleClosePostView} />
+        </div>
+      )}
     </div>
   );
 };
 
-export default Post;
+export default Posts;

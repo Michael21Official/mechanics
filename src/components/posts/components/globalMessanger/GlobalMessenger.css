@@ -1,0 +1,51 @@
+/* GlobalMessenger.css */
+
+/* Style for the container of messages */
+.global-messenger-container {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f5f5f5; /* Lighter background color for a cleaner look */
+}
+
+/* Style for individual messages */
+.message {
+    margin-bottom: 10px;
+    padding: 12px; /* Increased padding for a more spacious feel */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333; /* Darker text color for better readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lifted appearance */
+}
+
+/* Style for the input and button section */
+.input-section {
+    margin-top: 10px;
+}
+
+/* Style for the input field */
+.message-input {
+    margin-right: 10px;
+    padding: 12px; /* Increased padding for consistency */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333; /* Darker text color for better readability */
+}
+
+/* Style for the send button */
+.send-button {
+    padding: 12px 18px; /* Increased padding for a more prominent button */
+    cursor: pointer;
+    background-color: #3498db; /* Blue color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #2980b9; /* Darker blue color on hover for a subtle effect */
+}
