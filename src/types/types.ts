@@ -9,12 +9,57 @@ export interface UserData {
   // Dodaj inne pola użytkownika, jeśli są potrzebne
 }
 
+export interface CommentType {
+  commentId: number;
+  postId: number;
+  author: {
+    avatarUrl: string;
+    username: string;
+  };
+  content: string;
+  created_at: Date; // Zmienione z 'date' na 'created_at'
+  likes_count: number;
+  dislikes_count: number;
+  other_comment_details: string;
+}
+
+
+
+
+// ... reszta kodu ...
+
+// Typ dla danych użytkownika
+export interface UserData {
+  avatarUrl: string; // URL awatara użytkownika
+  username: string; // nazwa użytkownika
+  email?: string; // Pole email jako opcjonalne
+  password?: string; // Pole password jako opcjonalne
+  // Dodaj inne pola użytkownika, jeśli są potrzebne
+}
+
+// ... reszta kodu ...
+
+
+export interface Post {
+  image: string;
+  name: string;
+  status: string;
+  comments: number;
+  category: string;
+}
+
+export interface PostPageProps {
+  user: UserData;
+  posts: Post[];
+}
+
 // Typ dla postu
 export interface PostType {
   id: number;
   author: string;
   content: string;
   date: string;
+  comments: CommentType[];
 }
 
 export interface PostServiceProps {

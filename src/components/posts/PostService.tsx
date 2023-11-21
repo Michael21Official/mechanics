@@ -1,5 +1,5 @@
 import React from 'react';
-import PostRow from './components/PostRow';
+import PostRow from './components/postRow/PostRow';
 import { PostServiceProps } from '../../types/types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

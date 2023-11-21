@@ -20,7 +20,7 @@ const PostRow: React.FC<PostRowProps> = ({
 }) => {
 
   // Załaduj obrazek
-  const imageUrl = ImageService.loadImage(image);
+  //const imageUrl = ImageService.loadImage(image);
   return (
     <div className="post-row">
       <button className="cell-more-button">

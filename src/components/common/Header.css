@@ -16,7 +16,6 @@ ul {
 
 li {
   display: inline; /* Wyświetlenie elementów nawigacji obok siebie */
-  margin-right: 20px; /* Margines między elementami nawigacji */
 }
 
 /* Stylowanie linków nawigacyjnych */
