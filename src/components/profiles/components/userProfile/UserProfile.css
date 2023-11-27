@@ -1,0 +1,44 @@
+/* D:\Studia\DYPLOMÓWKA\mechanics-nexus\mechanics\src\components\profiles\UserProfile.css */
+
+.UserProfile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AvatarSection {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .Avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .UserInfo {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .UserEmail {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .StatsSection {
+    flex: 1;
+  }
+  
+  .Stats {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Add more styles as needed */
+  
