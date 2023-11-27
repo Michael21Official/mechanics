@@ -1,4 +1,3 @@
-// PostPage.tsx
 import React from 'react';
 import Header from '../common/Header';
 import ProfileInPosts from './ProfileInPosts';
@@ -8,6 +7,7 @@ import './PostPage.css';
 
 function PostPage() {
   const user = {
+    user_id: 1, // Dodaj user_id
     avatarUrl: '/assets/image/logo.png',
     username: 'NazwaUzytkownika',
   };
@@ -33,7 +33,7 @@ function PostPage() {
 
   return (
     <div className="post-page">
-      <div id="NAGLOWEK"><ProfileInPosts user={user} /></div>
+      <div id="NAGLOWEK"></div>
       <div id="MENU"><Header /></div>
       <div id="POST">
         <Posts posts={posts} />

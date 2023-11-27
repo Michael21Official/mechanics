@@ -1,12 +1,48 @@
+// types.ts
 import { ReactNode } from 'react';
 
 // Typ dla danych użytkownika
 export interface UserData {
-  avatarUrl: string; // URL awatara użytkownika
-  username: string; // nazwa użytkownika
-  email?: string; // Pole email jako opcjonalne
-  password?: string; // Pole password jako opcjonalne
-  // Dodaj inne pola użytkownika, jeśli są potrzebne
+  user_id: number; // Dodaj to pole
+  avatarUrl: string;
+  username: string;
+  email?: string;
+  password?: string;
+  account_created_at?: string;
+  scientific_interests?: string;
+  birth_year?: number;
+  university_name?: string;
+  faculty?: string;
+  field_of_study?: string;
+  degree_level?: string;
+  user_title?: string;
+  other_user_details?: string;
+}
+
+export interface Message {
+  message_id: number;
+  user_id: number;
+  content: string;
+  created_at: string;
+}
+
+export interface MessageImage {
+  message_image_id: number;
+  message_id: number;
+  image_data: string;
+  created_at: string;
+}
+
+export interface UserStats {
+  user_id: number;
+  posts_count: number;
+  likes_count: number;
+  comments_count: number;
+  successful_posts_count: number;
+  failed_posts_count: number;
+  account_created_at?: string;
+  scientific_interests?: string;
+  other_user_stats_details?: string;
 }
 
 export interface CommentType {
@@ -17,28 +53,11 @@ export interface CommentType {
     username: string;
   };
   content: string;
-  created_at: Date; // Zmienione z 'date' na 'created_at'
+  created_at: Date;
   likes_count: number;
   dislikes_count: number;
   other_comment_details: string;
 }
-
-
-
-
-// ... reszta kodu ...
-
-// Typ dla danych użytkownika
-export interface UserData {
-  avatarUrl: string; // URL awatara użytkownika
-  username: string; // nazwa użytkownika
-  email?: string; // Pole email jako opcjonalne
-  password?: string; // Pole password jako opcjonalne
-  // Dodaj inne pola użytkownika, jeśli są potrzebne
-}
-
-// ... reszta kodu ...
-
 
 export interface Post {
   image: string;
@@ -53,7 +72,6 @@ export interface PostPageProps {
   posts: Post[];
 }
 
-// Typ dla postu
 export interface PostType {
   id: number;
   author: string;
@@ -72,48 +90,39 @@ export interface PostServiceProps {
   }[];
 }
 
-
-// Typy do PrivateRoute
 export interface RouteType {
-  element: ReactNode; // element może być dowolnym elementem React (komponentem lub JSX)
-  isAuthenticated: boolean; // informacja, czy użytkownik jest uwierzytelniony
+  element: ReactNode;
+  isAuthenticated: boolean;
 }
 
-// Interfejs dla props komponentu PrivateRoute
 export interface PrivateRouteProps {
-  isAuthenticated: boolean; // informacja, czy użytkownik jest uwierzytelniony
-  children: ReactNode; // children może być dowolnym elementem React (komponentem lub JSX)
+  isAuthenticated: boolean;
+  children: ReactNode;
 }
 
-// Typ dla danych użytkownika w komponencie UserProfile
 export interface UserProfileProps {
-  user: {
-    avatarUrl: string; // URL awatara użytkownika
-    username: string; // nazwa użytkownika
-  };
+  user: UserData;
+  stats: UserStats;
 }
 
-// Typ dla danych meczu w komponencie RecentMatches
 export interface Match {
-  result: string; // wynik meczu (np. 'Win' lub 'Loss')
-  date: string; // data meczu
-  time: string; // czas trwania meczu
+  result: string;
+  date: string;
+  time: string;
 }
 
-// Typ dla paska umiejętności w komponencie SkillBar
 export interface SkillBarProps {
-  label: string; // etykieta paska (np. 'PVP' lub 'Farming')
-  value: number; // wartość paska umiejętności
-  color: string; // kolor paska umiejętności
+  label: string;
+  value: number;
+  color: string;
 }
 
-// Typ dla statystyk użytkownika w komponencie UserStats
 export interface UserStatsProps {
   stats: {
-    pvp: number; // liczba punktów w umiejętności PVP
-    farming: number; // liczba punktów w umiejętności Farming
-    victories: number; // liczba zwycięstw
-    supporting: number; // liczba punktów w umiejętności Supporting
+    pvp: number;
+    farming: number;
+    victories: number;
+    supporting: number;
   };
 }
 

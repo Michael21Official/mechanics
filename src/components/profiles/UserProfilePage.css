@@ -1,226 +1,55 @@
-/* UserProfilePage.css */
+/* D:\Studia\DYPLOMÓWKA\mechanics-nexus\mechanics\src\components\profiles\UserProfilePage.css */
 
-
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-}
-
-.left, .right {
-  width: 48%; /* Adjust the width according to your needs */
-}
-
-.left {
-  border-radius: 15px;
-}
-
-.top, .bottom {
-  background-color: #fff;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.35);
-  border-radius: 15px;
-  margin: 10px 0;
-  padding: 10px;
-}
-
-.top.profile {
-  position: relative;
-  height: 220px;
-}
-
-.bg-profile {
-  background: url("https://pbs.twimg.com/media/DmVLQfSW0AAeyHu.jpg") top;
-  background-size: cover;
-  height: 95px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.pic-profile {
-  width: 115px;
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 80px;
-  border: 2px solid #fff;
-}
-
-.profil img, .trophy img {
-  width: 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.profil span, .trophy span {
-  cursor: pointer;
-  color: #848eab;
-  position: absolute;
-  bottom: 10px;
-  font-size: 9pt;
-  left: 50px;
-  padding: 10px 20px 10px 0;
-  border-right: 2px solid #e4e9ef;
-}
-
-.left .bottom {
-  position: relative;
-  top: 0;
-  height: auto;
-}
-
-.level h4, .level span {
-  font-size: 10pt;
-  color: #8f8f8f;
-  margin-left: 60px;
-}
-
-.warrior img, .hunter img, .mage img, .priest img {
-  width: 30px;
-  position: absolute;
-  left: 25px;
-}
-
-.play {
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  padding: 10px 20px;
-  margin: 10px auto;
-  display: block;
-  border: 1px solid #86baff;
-  color: #86baff;
-  font-size: 10pt;
-}
-
-.right .top {
-  position: relative;
-  top: 0;
-  height: auto;
-}
-
-h1 {
-  padding-top: 20px;
-  text-align: center;
-  font-size: 12pt;
-  font-weight: 400;
-  color: #888;
-}
-
-.skills {
-  margin: 20px 0 30px 30px;
-}
-
-.skillsTop {
-  margin: 5px 0 3px 0;
-  font-size: 10pt;
-  text-align: left;
-  font-weight: 600;
-  color: #8f8f8f;
-  font-weight: 300;
-}
-
-.skillsBottom {
-  margin: 2px 0 15px 0;
-  display: flex;
-  align-items: center;
-  height: 8px;
-  background: #e1e1e1;
-  border-radius: 5px;
-}
-
-.progress-bar {
-  height: 100%;
-  border-radius: 5px;
-}
-
-.skillsTop span {
-  margin-right: 15%;
-  font-weight: 500;
-}
-
-.pvp {
-  width: 62%;
-  background-color: #ff7676;
-}
-
-.farming {
-  width: 45%;
-  background-color: #53e69d;
-}
-
-victories {
-  width: 91%;
-  background-color: #ffe685;
-}
-
-supporting {
-  width: 77%;
-  background-color: #76b1ff;
-}
-
-.fa-circle-thin {
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  font-size: 13px;
-  color: #ccc;
-}
-
-.fa-circle-thin span {
-  font-size: 9pt;
-  color: #aaa;
-  margin-left: 10px;
-}
-
-.right .bottom {
-  height: auto;
-  position: relative;
-  top: 0;
-}
-
-.setting {
-  width: 20px;
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.matches {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.matches td {
-  font-size: 9pt;
-  padding-bottom: 18px !important;
-  color: #8f8f8f;
-}
-
-.wl {
-  font-weight: 500;
-}
-
-.date {
-  font-weight: 400;
-  text-align: center;
-}
-
-.time {
-  font-weight: 500;
-  float: right;
-}
-
-.view-more {
-  cursor: pointer;
-  color: #86baff;
-  font-size: 10pt;
-  margin: 0 auto;
-  display: block;
-}
+/* Styl dla kontenera strony profilu */
+.profile-page-container {
+    width: 100%;
+    max-width: 1200px; /* Dostosuj maksymalną szerokość według potrzeb */
+    margin: 0 auto; /* Center content horizontally */
+    display: flex;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  /* Styl dla sekcji nagłówka */
+  #HEADER {
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Styl dla sekcji profilu */
+  #PROFILE {
+    color: #000;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Center content horizontally */
+  }
+  
+  /* Styl dla sekcji messengera */
+  #MESSENGER {
+    color: #000;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Center content horizontally */
+  }
+  
+  /* Dodatkowy styl dla kontenera strony profilu */
+  #PAGE-PROFILE {
+    display: flex;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Ustaw wysokość na 100% widoku, aby zajmować cały ekran */
+  }
+  
+  /* Inne style, jeśli potrzebujesz */
+  

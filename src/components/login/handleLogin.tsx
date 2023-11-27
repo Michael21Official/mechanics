@@ -12,6 +12,7 @@ function handleLogin(email: string, password: string): Promise<{ user: UserData 
     if (email === exampleEmail && password === examplePassword) {
       // Logowanie się powiodło, przypisz dane do obiektu UserData
       const user: UserData = {
+        user_id: 1, // Dodaj user_id
         email: email,
         password: password,
         avatarUrl: 'url-do-awatara', // Dostosuj to do rzeczywistych danych użytkownika
