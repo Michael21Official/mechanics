@@ -1,0 +1,88 @@
+/* RegistrationPage.css */
+
+.registration-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  margin: 0; 
+}
+
+.registration-form {
+  background-color: var(--primary-bg-color); 
+  color: var(--text-color); 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  max-width: 75%;
+  min-width: 75%; 
+  margin: auto; 
+  box-sizing: border-box; 
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--text-color);
+  box-sizing: border-box; 
+}
+
+#MENU {
+  width: 10%;
+  float: left;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#REGISTER-VIEW {
+  width: 90%;
+  float: left;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-register {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; 
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 5px;
+  background-color: #ffffff; /* White background */
+  color: #495057; /* Text color */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input {
+  border-color: #80bdff; /* Border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Box shadow on focus */
+}

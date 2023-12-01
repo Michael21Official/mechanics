@@ -1,28 +1,22 @@
-import { UserData } from '../../types/types';
-import React from 'react';
+import { LoginUserData } from '../../types/types';
 
-function handleLogin(email: string, password: string): Promise<{ user: UserData }> {
-  // Przykład przykładowego e-maila i hasła do logowania
-  const exampleEmail = 'przykladowy@email.com';
-  const examplePassword = 'haslo123';
+const exampleUserData: LoginUserData = {
+  email: 'przykladowy@email.com',
+  password: 'haslo123',
+};
 
-  // Tutaj możesz dodać logikę logowania, np. wywołując odpowiednie API lub funkcje autentykacji.
-  // W tym przypadku, porównujemy przekazane dane z przykładowymi danymi.
+function handleLogin(email: string, password: string): Promise<{ user: LoginUserData }> {
   return new Promise((resolve, reject) => {
-    if (email === exampleEmail && password === examplePassword) {
-      // Logowanie się powiodło, przypisz dane do obiektu UserData
-      const user: UserData = {
-        user_id: 1, // Dodaj user_id
-        email: email,
-        password: password,
-        avatarUrl: 'url-do-awatara', // Dostosuj to do rzeczywistych danych użytkownika
-        username: 'Nazwa Użytkownika', // Dostosuj to do rzeczywistych danych użytkownika
-      };
-      resolve({ user });
-    } else {
-      // Błąd logowania, wywołaj reject z odpowiednim komunikatem błędu
-      reject('Nieprawidłowy e-mail lub hasło');
-    }
+    // Przykładowa asynchroniczna logika logowania (np. wywołanie API)
+    setTimeout(() => {
+      if (email === exampleUserData.email && password === exampleUserData.password) {
+        // Logowanie się powiodło, przypisz dane do obiektu LoginUserData
+        resolve({ user: exampleUserData });
+      } else {
+        // Błąd logowania, wywołaj reject z odpowiednim komunikatem błędu
+        reject('Nieprawidłowy e-mail lub hasło');
+      }
+    }, 1000); // Symulacja opóźnienia w procesie logowania
   });
 }
 
