@@ -6,6 +6,8 @@ import PostsPage from '../components/posts/PostsPage';
 import UserProfilePage from '../components/profiles/UserProfilePage';
 import PrivateRoute from './PrivateRoute';
 import LoadingSpinner from '../components/login/LoadingSpinner'; // Importuj LoadingSpinner
+import RegistrationPage from '../components/registration/RegistrationPage'; 
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -30,6 +32,10 @@ function App() {
         // Po zakończeniu ładowania, wyświetl odpowiednią zawartość aplikacji
         <Routes>
           <Route path="/login" element={<LoginPage setIsAuthenticated={setIsAuthenticated} />} />
+          <Route
+            path="/registration" // Dodaj trasę dla RegistrationPage
+            element={<RegistrationPage />}
+          />
           <Route
             path="/posts"
             element={

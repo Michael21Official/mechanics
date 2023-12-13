@@ -7,7 +7,7 @@ import { UserProfileProps, UserStats, UserData } from '../../types/types';
 
 function UserProfilePage() {
   const [userData, setUserData] = useState<UserData>({
-    user_id: 1, // Dodaj user_id
+    user_id: 1,
     avatarUrl: '/image/logo.png',
     username: 'JohnDoe',
     email: 'john.doe@example.com',
@@ -20,11 +20,16 @@ function UserProfilePage() {
     degree_level: 'Inżynier',
     user_title: 'Student',
     other_user_details: 'Dodatkowe informacje o użytkowniku',
+    posts_count: 0, // Provide default or actual value
+    likes_count: 0, // Provide default or actual value
+    comments_count: 0, // Provide default or actual value
+    successful_posts_count: 0, // Provide default or actual value
+    failed_posts_count: 0, // Provide default or actual value
+    other_user_stats_details: '', // Provide default or actual value
   });
   
-
   const [userStats, setUserStats] = useState<UserStats>({
-    user_id: 1, // Dodaj user_id
+    user_id: 1,
     posts_count: 10,
     likes_count: 20,
     comments_count: 5,
@@ -34,6 +39,7 @@ function UserProfilePage() {
     scientific_interests: 'Mechanika kwantowa',
     other_user_stats_details: 'Dodatkowe informacje o statystykach użytkownika',
   });
+  
   
 
   const isAuthenticated = true;
