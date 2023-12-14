@@ -1,6 +1,5 @@
 import React from 'react';
 import './PostRow.css';
-import * as ImageService from 'D:/Studia/DYPLOMÓWKA/mechanics-nexus/mechanics/src/services/ImageService';
 
 
 interface PostRowProps {

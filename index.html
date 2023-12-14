@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Index</title>
+</head>
+<body>
+
+<script>
+    // Wykorzystaj JavaScript, aby dynamicznie wczytać zawartość z katalogu public
+    fetch('/public/index.html')
+        .then(response => response.text())
+        .then(html => {
+            // Wstaw zawartość do bieżącego dokumentu
+            document.body.innerHTML = html;
+        })
+        .catch(error => console.error('Błąd podczas ładowania pliku index.html:', error));
+</script>
+
+</body>
+</html>
